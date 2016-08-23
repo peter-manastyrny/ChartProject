@@ -60,14 +60,11 @@ def main():
     #Get a list of release labels from 1st column of csv file
     ls_release_numbers = get_release_labels(file_data)
 
-    #prepare list of labels for the chart legend
-    ls_legend = ['Tasks', 'Defects', 'Total']
-
     #Get array of values to build the chart
     chart_input_data = file_data[:, 1:]
 
     #invoke chart build function with prepared parameters
-    build_chart(chart_input_data, ls_release_numbers, ls_legend)
+    build_chart(chart_input_data, ls_release_numbers, LS_LEGEND)
 
 
 if __name__ == '__main__':
